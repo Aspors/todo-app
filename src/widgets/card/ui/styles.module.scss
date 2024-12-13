@@ -1,0 +1,32 @@
+.card{
+    $border: rem(1) solid var(--color-border-basic);
+    $shadow: var(--color-text-weak) 0px 5px 5px;
+
+    position: relative;
+    margin: 0 auto;
+    width: rem(600);
+    height: rem(400);
+    border: $border;
+    background: var(--color-bg-card);
+    z-index: 0;
+    transform-style: preserve-3d;
+    box-shadow: $shadow;
+    &::before, &::after{
+        content: '';
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: $border;
+    };
+    &::before{
+        transform: translate(-50%, -49%) translateZ(-1px);
+        box-shadow: $shadow;
+    }
+    &::after{
+        transform: translate(-50%, -48%) translateZ(-1px);
+        box-shadow: $shadow;
+    }
+}

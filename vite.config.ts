@@ -12,6 +12,20 @@ export default defineConfig({
   resolve: {
     alias: {
       'src': path.resolve(packageRoot, './src'),
+      '@/styles': path.resolve(packageRoot, './src/app/styles'),
+    },
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: (content, filePath) => {
+          if (filePath.endsWith('index.scss')) {
+            return content;
+          }
+
+          return `@use '@/styles/functions.scss' as *;` + content;
+        },
+      },
     },
   },
 })
