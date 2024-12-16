@@ -7,6 +7,12 @@
     &__counter {
         font-size: rem(14);
         user-select: none;
+        @media (max-width: 516px) {
+            font-size: rem(12);
+        }
+        @media (max-width: 375px) {
+            font-size: rem(9);
+        }
     }
 
     &__filters {
@@ -22,6 +28,13 @@
             border-radius: rem(4);
             border: rem(2) solid var(--color-bg-card);
             font-size: rem(14);
+
+            @media (max-width: 516px) {
+                font-size: rem(12);
+            }
+            @media (max-width: 375px) {
+                font-size: rem(9);
+            }
             &._active {
                 pointer-events: none;
                 border: solid rem(2) var(--color-header);
@@ -44,6 +57,12 @@
         border-radius: rem(4);
         font-size: rem(14);
 
+        @media (max-width: 516px) {
+            font-size: rem(12);
+        }
+        @media (max-width: 375px) {
+            font-size: rem(9);
+        }
         &:hover {
             color: var(--color-text-white);
             box-shadow: 0 0 0px 0px var(--color-bg-card) inset;

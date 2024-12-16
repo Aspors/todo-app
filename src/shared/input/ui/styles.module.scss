@@ -13,6 +13,11 @@
         left: $input-padding;
         top: $input-padding;
 
+        @media (max-width: 515px) {
+            font-size: rem(16);
+            top: $input-padding + rem(4);
+        }
+
         &._fullfilled {
             font-size: rem(13);
             transform: translate(rem(0), rem(-16));

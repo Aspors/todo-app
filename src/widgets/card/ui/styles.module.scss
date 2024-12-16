@@ -11,6 +11,19 @@
     z-index: 0;
     transform-style: preserve-3d;
     box-shadow: $shadow;
+
+    @media (max-width: 515px) {
+        width: rem(316);
+    }
+
+    @media (max-width: 375px) {
+        width: rem(286);
+    }
+
+    @media (max-width: 320px) {
+        width: rem(240);
+    }
+
     &::before,
     &::after {
         content: "";
