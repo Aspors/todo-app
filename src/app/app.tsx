@@ -1,11 +1,12 @@
-import React, { FunctionComponent } from 'react'
+import { FunctionComponent } from "react";
 
-import './styles/index.scss';
-import Card from 'src/widgets/card';
+import "./styles/_index.scss";
+import Card from "src/widgets/card";
+import { APP_HEADER } from "./config/constants/base.constants";
 
 export const App: FunctionComponent = () => (
-  <div>
-    <h1>todos</h1>
-    <Card />
-  </div>
-)
+    <div className="app-wrapper">
+        <h1>{APP_HEADER}</h1>
+        <Card />
+    </div>
+);

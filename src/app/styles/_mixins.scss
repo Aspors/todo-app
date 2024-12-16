@@ -1,0 +1,17 @@
+@use "functions" as *;
+
+@mixin fixed_center() {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin custom_scroll-bar() {
+    &::-webkit-scrollbar {
+        width: rem(6);
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: rem(8);
+        background: var(--color-header);
+    }
+}

@@ -1,0 +1,52 @@
+.managment-panel {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: rem(8);
+
+    &__counter {
+        font-size: rem(14);
+        user-select: none;
+    }
+
+    &__filters {
+        display: flex;
+        column-gap: rem(4);
+        button {
+            user-select: none;
+            background: var(--color-header);
+            box-shadow: 0 0 rem(9) rem(9) var(--color-bg-card) inset;
+            transition: box-shadow 0.3s ease-in-out,
+                color 0.3s 0.02s ease-in-out;
+
+            border-radius: rem(4);
+            border: rem(2) solid var(--color-bg-card);
+            font-size: rem(14);
+            &._active {
+                pointer-events: none;
+                border: solid rem(2) var(--color-header);
+                border-radius: rem(4);
+            }
+            &:not(._active) {
+                &:hover {
+                    color: var(--color-text-white);
+                    box-shadow: 0 0 0px 0px var(--color-bg-card) inset;
+                }
+            }
+        }
+    }
+    &__clear-button {
+        user-select: none;
+        background: var(--color-header);
+        box-shadow: 0 0 rem(8) rem(8) var(--color-bg-card) inset;
+        transition: box-shadow 0.3s ease-in-out, color 0.3s 0.02s ease-in-out;
+
+        border-radius: rem(4);
+        font-size: rem(14);
+
+        &:hover {
+            color: var(--color-text-white);
+            box-shadow: 0 0 0px 0px var(--color-bg-card) inset;
+        }
+    }
+}

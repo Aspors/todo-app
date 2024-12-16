@@ -1,0 +1,35 @@
+.dropdown-input {
+    $input-padding: rem(8);
+
+    position: relative;
+    cursor: text;
+    width: 100%;
+
+    &__label {
+        position: absolute;
+        cursor: text;
+        user-select: none;
+        transition: font-size 0.3s ease, transform 0.3s ease;
+        left: $input-padding;
+        top: $input-padding;
+
+        &._fullfilled {
+            font-size: rem(13);
+            transform: translate(rem(0), rem(-16));
+        }
+    }
+
+    &:focus-within {
+        .dropdown-input__label {
+            font-size: rem(13);
+            transform: translate(rem(0), rem(-16));
+        }
+    }
+
+    &__body {
+        outline: none;
+        border: none;
+        padding: $input-padding;
+        width: 100%;
+    }
+}

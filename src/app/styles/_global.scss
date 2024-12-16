@@ -1,20 +1,38 @@
-@use './functions.scss' as *;
-*{
+@use "functions" as *;
+@use "mixins" as *;
+
+* {
     box-sizing: border-box;
     font-family: "Roboto";
     color: var(--color-text-basic);
     font-size: rem(20);
 }
 
-body{
+body {
     background-color: var(--color-bg-body);
 }
 
-h1{
+h1 {
     color: var(--color-header);
     text-align: center;
     font-weight: 100;
     font-size: rem(72);
     padding: 0;
     margin: 0;
+}
+
+button {
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.app-wrapper {
+    @include fixed_center();
+
+    position: fixed;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
