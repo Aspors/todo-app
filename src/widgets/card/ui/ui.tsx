@@ -106,12 +106,12 @@ const Card = memo((): ReactNode => {
                     </>
                 }
             >
-                <AnimatePresence>
+                <AnimatePresence initial={false}>
                     {filteredItems.map((item, id) => (
                         <motion.div
                             className={styles["card__item"]}
                             animate={{ x: 0, opacity: 1 }}
-                            initial={{ x: 100, opacity: 0 }}
+                            initial={{ x: 100, opacity: 1 }}
                             exit={{
                                 x: -100,
                                 opacity: 0,
